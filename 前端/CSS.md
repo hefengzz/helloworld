@@ -1,6 +1,6 @@
 # CSS
 
-## 函数
+## 1. 函数
 
 CSS中可以用一些简单的函数
 
@@ -47,7 +47,7 @@ CSS中可以用一些简单的函数
 
 ![image-20211127201427490](CSS.assets/image-20211127201427490.png)
 
-## @规则
+## 2. @规则
 
 到目前为止，我们还没有遇到 `@rules` (pronounced "at-rules"). 这是一些特殊的规则，为 CSS提供了一些关于如何表现的指导。 有些`@rules` 规则很简单，有规则名和值。例如，要将额外的样式表导入主CSS样式表，可以使用`@import`:
 
@@ -73,7 +73,7 @@ body {
 }
 ```
 
-## 速记属性
+## 3. 速记属性
 
 一些属性，如 [`font`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font), [`background`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background), [`padding`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding), [`border`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border), and [`margin`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin) 等属性称为速记属性--这是因为它们允许您在一行中设置多个属性值，从而节省时间并使代码更整洁。
 

@@ -1,6 +1,6 @@
 #JavaScritpt
 
-### 类型声明
+## 1. 类型声明
 
 ```javascript
 // 局部变量
@@ -17,7 +17,7 @@ const i = 0;
 
 但是如果你是在`web`开发中，建议还是使用`var`，因为很多低版本的浏览器不支持`ES6`的特性
 
-### 数据类型
+## 2. 数据类型
 
 `number`：数组	整数/小数/NaN(不是数字的数字类型)
 
@@ -29,7 +29,7 @@ const i = 0;
 
 `undefined`：未定义。如果一个变量没有初始化，默认赋值为undefined
 
-### 正则表达式
+## 3. 正则表达式
 
 1. 单个字符:[ ]
 
@@ -53,14 +53,14 @@ const i = 0;
    * m 如果缺省:  { ,n} 最多n次
    * n 如果缺省: {m, } 最少m次
 
-### 标签
+## 4. 标签
 
 `<a>`：超链接功能有两种：
 
 >1. 可以被点击：样式
 >2. 点击后跳转到href指定的url，但是通过href="javascript:void(0);"可以实现消除此功能。
 
-### 样式
+## 5. 样式
 
 通过document调用属性style时，如果样式属性有「`-`」则可以将横杠后的首字母大写。
 
@@ -121,7 +121,7 @@ $('#selector').hide();
 
 # ES6
 
-###模板字符串
+##1. 模板字符串
 
 ```javascript
 var person = {
@@ -139,7 +139,7 @@ console.log(str1);
 console.log(str2);
 ```
 
-### 函数默认参数
+## 2. 函数默认参数
 
 ```javascript
 function sum1(a, b) {
@@ -153,7 +153,7 @@ function sum2(a, b=5) {
 sum2(100);
 ```
 
-### 箭头函数
+## 3. 箭头函数
 
 箭头函数很重要，在`uniapp`，`小程序`和`脚手架`中经常会使用到
 
@@ -171,7 +171,7 @@ var sum2 = (a, b) => {
 var sum2 = (a, b) => a + b;
 ```
 
-### 对象初始化简写
+##4. 对象初始化简写
 
 ```javascript
 var info = {
@@ -192,7 +192,7 @@ var info = {
 }
 ```
 
-### 对象结构
+##5. 对象结构
 
 ```javascript
 var info = {
@@ -219,7 +219,7 @@ console.log(address);
 console.log(go);
 ```
 
-### 传播操作符
+##6. 传播操作符
 
 ```javascript
 var info = {
