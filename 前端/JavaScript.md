@@ -1,4 +1,4 @@
-#JavaScritpt
+# JavaScritpt
 
 ## 1. 类型声明
 
@@ -19,7 +19,9 @@ const i = 0;
 
 ## 2. 数据类型
 
-`number`：数组	整数/小数/NaN(不是数字的数字类型)
+`number`：数字 整数/小数
+
+`NaN`: 
 
 `string`：字符串
 
@@ -28,6 +30,67 @@ const i = 0;
 `null`：一个对象为空的占位符
 
 `undefined`：未定义。如果一个变量没有初始化，默认赋值为undefined
+
+1. 数据类型是在运行时确定的。
+2. 数据类型是动态的， 意思是一个变量刻意随意赋值任何类型
+
+**变量中的进制**
+
+```javascript
+// 八进制
+var num1 = 010;
+// 十六进制
+var num2 = 0xa;
+```
+
+### 数据类型转换
+
+##### 转为数字型
+
+1. 整数
+
+   ```javascript
+   // 不会做四舍五入
+   parseInt('3.14'); // 输出 3
+   parseInt('3.99'); // 输出 3
+   // 如果是数字开头会截取数字
+   parseInt('120px'); // 输出 120
+   parseInt('rrr120ll'); // 输出 NaN
+   ```
+
+2. 小数
+
+   ```javascript
+   parseFloat('3.14'); // 输出 3.14
+   // 如果是数字开头会截取数字
+   parseFloat('120px'); // 输出 120
+   parseFloat('rrr120ll'); // 输出 NaN
+   ```
+
+3. 隐式转换
+
+   ```javascript
+   // 这些表达式都可以让 String 转为 number
+   console.log('120' - 0); // 输出 120
+   console.log('120' * 1); // 输出 120
+   console.log('120' / 1); // 输出 120
+   // 要注意的是 + 是连接字符串
+   console.log('120' + 1); // 输出 1201
+   ```
+
+##### 转为字符串型
+
+```javascript
+// 方法 1
+String(123);
+// 方法 2
+var num = 123;
+num.toString;
+// 方法 3
+console.log(123 + '')
+```
+
+
 
 ## 3. 正则表达式
 
