@@ -294,7 +294,7 @@ Vue2.0的生命周期钩子一共有10个，同样结合官方文档作出了下
 
 原链接 https://www.cnblogs.com/mengfangui/p/8143702.html
 
-![image-20220219230148839](C:/Users/Zephyr/Desktop/VUE2.assets/image-20220219230148839.png)
+![image-20220219230148839](./VUE2.assets/image-20220219230148839.png)
 
 
 
@@ -429,7 +429,7 @@ https://www.cnblogs.com/ceceliahappycoding/p/10552620.html
 
    如果使用懒加载的方式就会把组件分为单个JS文件打包，只有在请求的时候才会从服务器拉取资源
 
-   ![image-20220221164759917](C:/Users/Zephyr/Desktop/VUE2.assets/image-20220221164759917.png)
+   ![image-20220221164759917](./VUE2.assets/image-20220221164759917.png)
 
 
 
@@ -476,4 +476,4 @@ https://www.cnblogs.com/ceceliahappycoding/p/10552620.html
 11. 触发 DOM 更新。
 12. 调用 `beforeRouteEnter` 守卫中传给 `next` 的回调函数，创建好的组件实例会作为回调函数的参数传入。
 
-![image-20220221184224210](C:/Users/Zephyr/Desktop/VUE2.assets/image-20220221184224210.png)
+![image-20220221184224210](./VUE2.assets/image-20220221184224210.png)
