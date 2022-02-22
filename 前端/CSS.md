@@ -160,6 +160,7 @@
     `vertical-align: top顶部 / bottom底部 / middle垂直居中 / baseline基线对齐`
     通常我们会去掉img的基线对齐，因为如果不去掉，img的下方会存在3-6px的间距
     `img {vertical-align: middle}`
+
 ### 2. 列表属性
 
 1. 列表标识符
@@ -388,7 +389,7 @@ margin-right: auto;  */
 
 #### 面试 元素如何居中
 
-##### 1. 中心点居中法
+##### 1. 原点居中法
 
 > 此方法适用于父元素尺寸未知，子元素尺寸已知（子元素尺寸大于父元素也可用）
 
@@ -564,3 +565,93 @@ Formatting context 是 W3C CSS2.1 规范中的一个概念。它是页面中的�
 - `<meta name='keywords' content=''>` 网页关键词
 - `<meta name='description' content=''>` 网页描述
 - 语义化标签
+
+### 浏览器引擎的前缀
+
+Chrome: WebKit内核  -webkit-
+Safari: WebKit内核  -webkit-
+Firefox: Gecko内核  -moz-
+IE: Trident内核     -ms-
+Opera: Presto内核   -o-
+
+## 21. 过渡
+
+指的是元素从一个状态到另一个状态平滑的变化过程
+
+`transition: 需要过渡的属性/如边框 过渡时间 速度效果 延迟时间`
+
+- 可以逗号分隔设置多个属性不同过渡效果
+- `all`可以指定所有属性
+
+速度效果:
+
+- 匀速过渡: linear(匀速)
+- 先慢后快: ease-in
+- 先快后慢: ease-out
+- 由慢变快后变慢: ease-in-out
+- 默认值, 慢速开始 ,慢速结束: ease
+
+常用场景(包括但不限于): 鼠标移入移出
+
+还可以用一个元素控制另一个元素的过渡(善用选择器)
+
+### 面试 居中
+
+原点居中法的第三步改为 `trensform: translate(-50%, -50%)`
+
+## 22. flex 弹性盒布局
+
+### 父元素属性
+
+1. `display: flex / inline-flex`
+    `flex` 将对象作为弹性伸缩盒显示
+    `inline-flex` 将对象作为内嵌块弹性伸缩盒显示
+2. `flex-direction` (主轴排列方向)
+    `row` 默认, 横向一行排列
+    `row-reverse` 反向横向一行排列
+    `column` 纵向一行排列
+    `column-reverse` 反向纵向一行排列
+3. `justify-content` (主轴对齐方式)
+    `flex-start` 默认,顶端对齐
+    `flex-end` 末端对齐
+    `center` 居中对齐
+    `space-between` 两端对齐, 中间自动分配
+    `space-around` 自动分配距离
+    **默认元素在主轴上容不下不会换行, 会被压缩**
+4. `align-items` (侧轴对齐方式)
+    `flex-start` 侧轴起始边界
+    `flex-end` 侧轴结束边界
+    `center` 居中放置
+    `baseline` 基线对齐
+    `stretch` 默认值, 项目被拉伸以适应容器, 前提是子元素没有在侧轴方向设置尺寸
+5. `flex-wrap` 设置换行
+    `nowrap` 容器为单行, 该情况下子项可能会溢出容器
+    `wrap` 容器为多行, 该情况下子项可能发生断行
+    `warap-reverse` 翻转排列
+6. `align-content` (行与行之间对齐方式)
+    `flex-start` 没有行间距
+    `flex-end` 底对齐没有行间距
+    `center` 居中对齐没有行间距
+    `sapce-between` 两端对齐, 中间自动分配
+    `space-around` 自动分配距离
+    `stretch` 默认值, 项目被拉伸以适应容器
+
+### 子元素属性
+
+1. `align-self` 灵活容器内被选中项目的对齐方式
+    **可重写灵活容器的`align-items`属性**
+    `auto` 默认值, 元素继承了它父容器的`align-items`属性
+    `stretch` 被拉伸以适应容器
+    `center` 元素位于容器中心
+    `flex-start` 元素位于容器的开头
+    `flex-end` 元素位于容器的结尾
+2. `order` 排序优先级
+    数字越大越后排, 默认为0, 支持负数
+3. `flex-grow` 项目的放大比例
+    `flex-grow: 1`
+    同`flex: 1` 放大比例
+4. `flex-shrink` 项目的缩小比例
+    `flex-shrink: 0` 元素不缩小
+5. `flexbasis` 项目的长度
+6. `flex`为345的简写形式
+    默认值 `flex: 0 1 atuo`
