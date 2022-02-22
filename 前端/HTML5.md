@@ -180,3 +180,23 @@
 
     `<lable for=''></lable>`
     `lable`的`for`属性用于关联控件的`id`属性
+
+## 3. HTML5
+
+### 语义化标签
+
+- nav：导航栏，与ul li a配合使用
+
+- aside：主内容无关，一般用于侧边栏
+
+- main：主内容区，只一次，此文档中的特有内容，导航、版权、广告不算
+
+- header：可多次，可以放在article、section里面
+
+- footer：可多次
+
+- article：独立内容，比如论坛帖子，博客条目，用户评论等
+
+- section：文档中的节，比如章节
+
+- adress：地址
